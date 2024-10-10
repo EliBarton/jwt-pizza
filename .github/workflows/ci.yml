@@ -46,10 +46,7 @@ jobs:
           git config user.email github-actions@github.com
           git add .
           git commit -m "generated"
-          git push - name: Update pages artifact
-              uses: actions/upload-pages-artifact@v3
-              with:
-                path: dist/
+          git push
   deploy:
     needs: build
     permissions:
